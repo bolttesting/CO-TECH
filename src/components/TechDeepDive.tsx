@@ -108,13 +108,13 @@ const TechDeepDive: React.FC = () => {
             </span>
           </button>
           
-          <div className="absolute inset-0 pointer-events-none flex flex-col justify-end p-8 md:p-12">
-            <div className="flex items-center gap-4 text-accent mb-4">
+          <div className="absolute inset-0 pointer-events-none flex flex-col justify-start md:justify-end p-4 md:p-8 lg:p-12">
+            <div className="flex items-center gap-2 md:gap-4 text-accent mt-2 md:mt-0 md:mb-4">
               <div className="relative">
-                <div className="w-3 h-3 rounded-full bg-accent animate-ping"></div>
-                <div className="absolute inset-0 w-3 h-3 rounded-full bg-accent"></div>
+                <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-accent animate-ping"></div>
+                <div className="absolute inset-0 w-2 h-2 md:w-3 md:h-3 rounded-full bg-accent"></div>
               </div>
-              <span className="text-xs font-black uppercase tracking-[0.3em] glass px-4 py-2 rounded-lg border border-accent/30">
+              <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] md:tracking-[0.3em] glass px-2 py-1 md:px-4 md:py-2 rounded-lg border border-accent/30">
                 Live Technology Logic Demo
               </span>
             </div>

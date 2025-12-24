@@ -25,7 +25,7 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose, videoSrc, titl
         <button
           onClick={onClose}
           aria-label="Close Video"
-          className="absolute top-6 right-6 z-50 w-14 h-14 flex items-center justify-center glass-dark hover:bg-red-500/20 text-white rounded-full transition-all text-3xl font-light hover:scale-110"
+          className="absolute top-3 right-3 md:top-6 md:right-6 z-50 w-10 h-10 md:w-14 md:h-14 flex items-center justify-center glass-dark hover:bg-red-500/20 text-white rounded-full transition-all text-xl md:text-3xl font-light hover:scale-110"
         >
           &times;
         </button>

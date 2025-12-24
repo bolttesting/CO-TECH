@@ -100,10 +100,10 @@ const TechDeepDive: React.FC = () => {
 
           <button
             onClick={toggleMute}
-            className="absolute bottom-8 right-8 z-30 glass-dark hover:bg-accent/20 text-white p-4 rounded-xl backdrop-blur-md transition-all flex items-center gap-3 border border-white/20 group shadow-2xl hover:scale-110"
+            className="absolute bottom-4 right-4 md:bottom-8 md:right-8 z-30 glass-dark hover:bg-accent/20 text-white p-2 md:p-4 rounded-xl backdrop-blur-md transition-all flex items-center gap-2 md:gap-3 border border-white/20 group shadow-2xl hover:scale-110"
           >
-            <span className="text-2xl leading-none">{isMuted ? '🔇' : '🔊'}</span>
-            <span className="text-xs font-black uppercase tracking-widest">
+            <span className="text-lg md:text-2xl leading-none">{isMuted ? '🔇' : '🔊'}</span>
+            <span className="text-[10px] md:text-xs font-black uppercase tracking-widest hidden sm:inline">
               {isMuted ? 'Unmute Technical Audio' : 'Mute Audio'}
             </span>
           </button>

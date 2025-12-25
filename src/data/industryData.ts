@@ -59,7 +59,7 @@ export const industryData: IndustryDataItem[] = [
     }
   },
   {
-    title: 'Precision Healthcare',
+    title: 'Smart Hospital',
     category: 'Patient & Asset Security',
     features: [
       'Critical asset search and retrieval reduced to under 30 seconds.',

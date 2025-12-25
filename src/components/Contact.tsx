@@ -95,7 +95,7 @@ const Contact: React.FC = () => {
     <section 
       ref={sectionRef}
       id="contact" 
-      className="relative py-32 bg-primary border-t border-white/10 min-h-screen flex items-center overflow-hidden"
+      className="relative py-8 md:py-12 bg-primary border-t border-white/10 min-h-screen flex items-center overflow-hidden snap-start"
     >
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -108,10 +108,7 @@ const Contact: React.FC = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16 reveal">
-            <span className="inline-block px-4 py-2 bg-accent/20 border border-accent/30 rounded-full text-accent text-sm font-semibold mb-4">
-              Contact
-            </span>
+          <div className="text-center mb-8 md:mb-12 reveal">
             <h3 className="text-5xl md:text-6xl font-black text-white mb-6">
               Send Us a Message
             </h3>
@@ -239,38 +236,24 @@ const Contact: React.FC = () => {
               </button>
               
               {submitStatus === 'success' && (
-                <div className="flex items-center gap-3 px-4 py-3 bg-green-500/20 border border-green-500/50 rounded-xl text-green-400">
-                  <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                <div className="flex items-center gap-3 px-5 py-4 glass-dark border border-green-500/30 rounded-xl text-white backdrop-blur-md">
+                  <svg className="w-5 h-5 flex-shrink-0 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <span className="text-sm font-semibold">Message sent successfully! We'll get back to you soon.</span>
+                  <span className="text-sm font-medium text-gray-200">Message sent successfully! We'll get back to you soon.</span>
                 </div>
               )}
               
               {submitStatus === 'error' && (
-                <div className="flex items-center gap-3 px-4 py-3 bg-red-500/20 border border-red-500/50 rounded-xl text-red-400">
-                  <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <div className="flex items-center gap-3 px-5 py-4 glass-dark border border-red-500/30 rounded-xl text-white backdrop-blur-md">
+                  <svg className="w-5 h-5 flex-shrink-0 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <span className="text-sm font-semibold">Failed to send message. Please try again or email us directly.</span>
+                  <span className="text-sm font-medium text-gray-200">Failed to send message. Please try again or email us directly.</span>
                 </div>
               )}
             </div>
           </form>
-
-          <div className="mt-16 text-center reveal">
-            <p className="text-gray-400 text-sm mb-6">
-              CoTech &copy; 2025 | An extension of The CoConsultants Group
-            </p>
-            <div className="flex justify-center gap-8 text-sm">
-              <a href="#" className="text-gray-400 hover:text-accent transition-all duration-300 hover:scale-110 inline-block">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-accent transition-all duration-300 hover:scale-110 inline-block">
-                Terms & Conditions
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </section>

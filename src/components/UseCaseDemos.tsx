@@ -31,9 +31,10 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose, videoSrc, titl
         </button>
         <video
           autoPlay
-          muted
+          muted={false}
           controls
           playsInline
+          controlsList="nodownload"
           className="w-full h-full object-cover rounded-3xl"
         >
           <source src={videoSrc} type="video/mp4" />
@@ -95,17 +96,14 @@ const UseCaseDemos: React.FC = () => {
       <section 
         ref={sectionRef}
         id="use-case-demos" 
-        className="relative py-32 bg-white min-h-screen flex items-center overflow-hidden"
+        className="relative py-8 md:py-12 bg-white min-h-screen flex items-center overflow-hidden snap-start"
       >
         {/* Background Decorations */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
 
         <div className="relative max-w-7xl mx-auto px-6 text-gray-900 w-full z-10">
-          <div className="text-center mb-20 reveal">
-            <span className="inline-block px-4 py-2 bg-secondary/10 border border-secondary/20 rounded-full text-secondary text-sm font-semibold mb-4">
-              Use Cases
-            </span>
+          <div className="text-center mb-8 md:mb-12 reveal">
             <h3 className="text-5xl md:text-6xl font-black text-primary tracking-tighter mb-6">
               Use Case Demos
             </h3>
@@ -145,7 +143,7 @@ const UseCaseDemos: React.FC = () => {
                     />
                     <div className="absolute inset-0 bg-primary/60 group-hover:bg-primary/40 transition-all duration-500"></div>
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-20 h-20 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center text-primary shadow-2xl group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                      <div className="w-20 h-20 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center text-primary shadow-2xl transition-all duration-300">
                         <svg className="w-10 h-10 ml-1" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M8 5v14l11-7z" />
                         </svg>
@@ -164,6 +162,21 @@ const UseCaseDemos: React.FC = () => {
                 </div>
               );
             })}
+          </div>
+
+          {/* Schedule Demo CTA */}
+          <div className="mt-8 md:mt-12 text-center reveal">
+            <button
+              onClick={() => window.location.href = 'mailto:admin@thecoconsultants.com?subject=Schedule Demo Request'}
+              className="btn-premium px-10 py-4 bg-secondary text-white font-bold rounded-xl shadow-2xl shadow-secondary/50 hover:shadow-secondary/70 hover:scale-105 transition-all duration-300 text-lg relative overflow-hidden"
+            >
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                Schedule Demo
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </span>
+            </button>
           </div>
         </div>
       </section>

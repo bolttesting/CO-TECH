@@ -9,7 +9,13 @@ interface InfographicItem {
 
 const infographics: InfographicItem[] = [
   { 
-    title: 'Construction Safety', 
+    title: 'How it works', 
+    color: '#2563eb', 
+    bgColor: 'bg-secondary/10', 
+    image: '/images/infographics/0. how it works infograph portrait.png'
+  },
+  { 
+    title: 'Construction Data', 
     color: '#fbcc14', 
     bgColor: 'bg-accent/10', 
     image: '/images/infographics/1. Construction Infograph.png'
@@ -27,7 +33,7 @@ const infographics: InfographicItem[] = [
     image: '/images/infographics/3. Warehouse Infograph.png'
   },
   { 
-    title: 'Smart Healthcare', 
+    title: 'Smart Hospital', 
     color: '#EF4444', 
     bgColor: 'bg-red-500/10', 
     image: '/images/infographics/4. Hospital Infograph.png'
@@ -153,17 +159,14 @@ const VisualSolutions: React.FC = () => {
       <section 
         ref={sectionRef}
         id="visuals" 
-        className="relative py-32 bg-primary text-white overflow-hidden min-h-screen flex items-center"
+        className="relative py-8 md:py-12 bg-primary text-white overflow-hidden min-h-screen flex items-center snap-start"
       >
         {/* Background Decorations */}
         <div className="absolute top-20 right-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
-          <div className="text-center mb-20 reveal">
-            <span className="inline-block px-4 py-2 bg-accent/10 border border-accent/20 rounded-full text-accent text-sm font-semibold mb-4">
-              Visuals
-            </span>
+          <div className="text-center mb-8 md:mb-12 reveal">
             <h3 className="text-5xl md:text-6xl font-black mb-6 text-white">
               Visual Use Case Scenarios
             </h3>

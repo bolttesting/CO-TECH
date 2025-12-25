@@ -6,6 +6,8 @@ import UseCaseDemos from './components/UseCaseDemos';
 import VisualSolutions from './components/VisualSolutions';
 import ProvenResults from './components/ProvenResults';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
+import StickyCTA from './components/StickyCTA';
 import './App.css';
 
 function App() {
@@ -19,7 +21,9 @@ function App() {
       <VisualSolutions />
       <ProvenResults />
       <Contact />
-      </div>
+      <Footer />
+      <StickyCTA />
+    </div>
   );
 }
 

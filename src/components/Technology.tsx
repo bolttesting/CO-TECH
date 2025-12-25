@@ -27,17 +27,14 @@ const Technology: React.FC = () => {
     <section 
       ref={sectionRef}
       id="technology" 
-      className="relative py-32 bg-white text-gray-800 min-h-screen flex items-center overflow-hidden"
+      className="relative py-8 md:py-12 bg-white text-gray-800 min-h-screen flex items-center overflow-hidden snap-start"
     >
       {/* Decorative Background Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
-        <div className="text-center mb-20 reveal">
-          <span className="inline-block px-4 py-2 bg-secondary/10 border border-secondary/20 rounded-full text-secondary text-sm font-semibold mb-4">
-            Technology
-          </span>
+        <div className="text-center mb-8 md:mb-12 reveal">
           <h3 className="text-5xl md:text-6xl font-black mb-6 text-primary">
             Precision Technology
           </h3>

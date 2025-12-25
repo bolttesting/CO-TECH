@@ -58,7 +58,7 @@ const TechDeepDive: React.FC = () => {
     <section 
       ref={sectionRef}
       id="tech-deep-dive" 
-      className="relative py-32 bg-primary overflow-hidden min-h-screen flex items-center justify-center"
+      className="relative py-8 md:py-12 bg-primary overflow-hidden min-h-screen flex items-center justify-center snap-start"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -70,10 +70,7 @@ const TechDeepDive: React.FC = () => {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:24px_24px]"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col items-center justify-center">
-        <div className="text-center mb-8 reveal">
-          <span className="inline-block px-4 py-2 bg-secondary/20 border border-secondary/30 rounded-full text-secondary text-sm font-semibold mb-3">
-            Deep Dive
-          </span>
+        <div className="text-center mb-6 md:mb-8 reveal">
           <h3 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">
             How it works
           </h3>
@@ -90,6 +87,7 @@ const TechDeepDive: React.FC = () => {
             loop
             playsInline
             controls
+            controlsList="nodownload"
           >
             <source src={videoUrls.howItWorks} type="video/mp4" />
             Your browser does not support the video tag.
@@ -100,11 +98,11 @@ const TechDeepDive: React.FC = () => {
 
           <button
             onClick={toggleMute}
-            className="absolute bottom-4 right-4 md:bottom-8 md:right-8 z-30 glass-dark hover:bg-accent/20 text-white p-2 md:p-4 rounded-xl backdrop-blur-md transition-all flex items-center gap-2 md:gap-3 border border-white/20 group shadow-2xl hover:scale-110"
+            className="absolute top-4 left-4 md:top-6 md:left-6 z-30 glass-dark hover:bg-accent/20 text-white p-2 md:p-3 rounded-lg backdrop-blur-md transition-all flex items-center gap-2 border border-white/20 group shadow-lg hover:scale-105 text-sm md:text-base"
           >
-            <span className="text-lg md:text-2xl leading-none">{isMuted ? '🔇' : '🔊'}</span>
-            <span className="text-[10px] md:text-xs font-black uppercase tracking-widest hidden sm:inline">
-              {isMuted ? 'Unmute Technical Audio' : 'Mute Audio'}
+            <span className="text-base md:text-lg leading-none">{isMuted ? '🔇' : '🔊'}</span>
+            <span className="text-[10px] md:text-xs font-semibold uppercase tracking-wide hidden sm:inline">
+              {isMuted ? 'Unmute' : 'Mute'}
             </span>
           </button>
           

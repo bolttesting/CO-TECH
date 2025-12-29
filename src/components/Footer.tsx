@@ -220,7 +220,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm text-center md:text-left">
-              CoTech © 2025 — An extension of the Coconsultants group
+              CoTech © 2025 — An extension of the Co Consultants group
             </p>
             <div className="flex gap-6 text-sm">
               <a 

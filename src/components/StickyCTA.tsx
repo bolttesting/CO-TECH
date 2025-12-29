@@ -2,7 +2,10 @@ import React from 'react';
 
 const StickyCTA: React.FC = () => {
   const handleClick = () => {
-    window.location.href = 'mailto:admin@thecoconsultants.com?subject=Schedule Demo Request';
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (

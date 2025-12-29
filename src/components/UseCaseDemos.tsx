@@ -105,7 +105,7 @@ const UseCaseDemos: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-6 text-gray-900 w-full z-10">
           <div className="text-center mb-8 md:mb-12 reveal">
             <h3 className="text-5xl md:text-6xl font-black text-primary tracking-tighter mb-6">
-              Use Case Demos
+              Use Case scenario
             </h3>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               High-precision deployment scenarios powered by advanced spatial intelligence.
@@ -167,7 +167,12 @@ const UseCaseDemos: React.FC = () => {
           {/* Schedule Demo CTA */}
           <div className="mt-8 md:mt-12 text-center reveal">
             <button
-              onClick={() => window.location.href = 'mailto:admin@thecoconsultants.com?subject=Schedule Demo Request'}
+              onClick={() => {
+                const element = document.getElementById('contact');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
               className="btn-premium px-10 py-4 bg-secondary text-white font-bold rounded-xl shadow-2xl shadow-secondary/50 hover:shadow-secondary/70 hover:scale-105 transition-all duration-300 text-lg relative overflow-hidden"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">

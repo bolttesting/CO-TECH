@@ -63,11 +63,11 @@ const ProvenResults: React.FC = () => {
     }
   ];
 
-  const colorClasses: { [key: string]: { border: string; text: string; bg: string } } = {
-    red: { border: 'border-red-500', text: 'text-red-500', bg: 'bg-red-500/10' },
-    sky: { border: 'border-sky-500', text: 'text-sky-500', bg: 'bg-sky-500/10' },
-    green: { border: 'border-green-500', text: 'text-green-500', bg: 'bg-green-500/10' },
-    yellow: { border: 'border-[#FDB813]', text: 'text-[#FDB813]', bg: 'bg-[#FDB813]/10' }
+  const colorClasses: { [key: string]: { border: string; text: string; bg: string; borderColor: string } } = {
+    red: { border: 'border-red-500', text: 'text-red-500', bg: 'bg-red-500/10', borderColor: '#ef4444' },
+    sky: { border: 'border-sky-500', text: 'text-sky-500', bg: 'bg-sky-500/10', borderColor: '#0ea5e9' },
+    green: { border: 'border-green-500', text: 'text-green-500', bg: 'bg-green-500/10', borderColor: '#10b981' },
+    yellow: { border: 'border-[#FDB813]', text: 'text-[#FDB813]', bg: 'bg-[#FDB813]/10', borderColor: '#FDB813' }
   };
 
   return (
@@ -97,7 +97,7 @@ const ProvenResults: React.FC = () => {
               <div
                 key={idx}
                 className="reveal card-premium p-10 bg-white rounded-3xl shadow-xl border-l-8 flex flex-col h-full text-left border-t border-r border-b border-gray-100 hover:border-gray-200 transition-all"
-                style={{ borderLeftColor: caseItem.color === 'yellow' ? '#FDB813' : undefined }}
+                style={{ borderLeftColor: colors.borderColor }}
               >
                 <span className={`text-xs font-black uppercase ${colors.text} mb-4 tracking-widest inline-block px-3 py-1 ${colors.bg} rounded-lg`}>
                   {caseItem.category}
@@ -122,7 +122,12 @@ const ProvenResults: React.FC = () => {
         {/* Schedule Demo CTA */}
         <div className="mt-8 md:mt-12 text-center reveal">
           <button
-            onClick={() => window.location.href = 'mailto:admin@thecoconsultants.com?subject=Schedule Demo Request'}
+            onClick={() => {
+              const element = document.getElementById('contact');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
             className="btn-premium px-10 py-4 bg-secondary text-white font-bold rounded-xl shadow-2xl shadow-secondary/50 hover:shadow-secondary/70 hover:scale-105 transition-all duration-300 text-lg relative overflow-hidden"
           >
             <span className="relative z-10 flex items-center justify-center gap-2">

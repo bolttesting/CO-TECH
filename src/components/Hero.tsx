@@ -77,7 +77,7 @@ const Hero: React.FC = () => {
               className="btn-premium group px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 bg-transparent border-2 border-accent/50 text-accent font-bold rounded-xl hover:bg-accent hover:text-primary hover:border-accent transition-all duration-300 text-xs sm:text-sm md:text-base backdrop-blur-sm hover:scale-105 shadow-lg hover:shadow-accent/50 w-full sm:w-auto"
             >
               <span className="flex items-center justify-center gap-2">
-                Explore Use Cases
+                Explore Solution
                 <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 group-hover:rotate-90 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>

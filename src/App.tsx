@@ -23,7 +23,7 @@ function App() {
       <Contact />
       <Footer />
       <StickyCTA />
-    </div>
+      </div>
   );
 }
 

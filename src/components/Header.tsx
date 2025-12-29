@@ -77,14 +77,14 @@ const Header: React.FC = () => {
               onClick={() => scrollToSection('use-case-demos')} 
               className="text-gray-300 hover:text-accent transition-all duration-300 relative group"
             >
-              Use Case
+              Solutions
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
             </button>
             <button 
               onClick={() => scrollToSection('visuals')} 
               className="text-gray-300 hover:text-accent transition-all duration-300 relative group"
             >
-              Visuals
+              Implementation
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
             </button>
             <button 
@@ -157,13 +157,13 @@ const Header: React.FC = () => {
                 onClick={() => scrollToSection('use-case-demos')} 
                 className="text-left text-white text-base sm:text-lg md:text-xl font-semibold py-2.5 sm:py-3 md:py-3.5 border-b border-white/10 hover:text-accent transition-colors duration-300"
               >
-                Use Case
+                Solutions
               </button>
               <button 
                 onClick={() => scrollToSection('visuals')} 
                 className="text-left text-white text-base sm:text-lg md:text-xl font-semibold py-2.5 sm:py-3 md:py-3.5 border-b border-white/10 hover:text-accent transition-colors duration-300"
               >
-                Visuals
+                Implementation
               </button>
               <button 
                 onClick={() => scrollToSection('results')} 

@@ -168,7 +168,7 @@ const VisualSolutions: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
           <div className="text-center mb-8 md:mb-12 reveal">
             <h3 className="text-5xl md:text-6xl font-black mb-6 text-white">
-              Visual Use Case Scenarios
+              challenges & Solutions
             </h3>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               High-definition infographics for technical implementation and spatial awareness.

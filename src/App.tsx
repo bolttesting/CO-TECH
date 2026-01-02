@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Technology from './components/Technology';
@@ -11,6 +12,10 @@ import StickyCTA from './components/StickyCTA';
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    document.title = 'CoTech: High-Precision BLE Location Tracking (RTLS)';
+  }, []);
+
   return (
     <div className="text-gray-100 overflow-x-hidden">
       <Header />

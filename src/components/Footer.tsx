@@ -1,18 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Footer: React.FC = () => {
-  const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>({
-    quickLinks: false,
-    contactInfo: false
-  });
-
-  const toggleSection = (section: string) => {
-    setOpenSections(prev => ({
-      ...prev,
-      [section]: !prev[section]
-    }));
-  };
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -21,157 +9,136 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="relative bg-primary border-t border-white/10 py-12 md:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* 4 Column Grid: Logo, Description, Quick Links, Contact Info */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-8 md:mb-12">
-          {/* 1. Logo Section */}
-          <div className="flex flex-col">
-            <div className="mb-2">
+    <footer className="relative bg-primary border-t border-white/10 overflow-hidden">
+      {/* Background Decorations */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 z-10">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
+          {/* Brand Section */}
+          <div className="lg:col-span-1">
+            <div className="mb-6">
               <img 
                 src="/Artboard 6@4x.png" 
                 alt="COTECH Logo" 
-                className="h-8 md:h-10 lg:h-12 w-auto max-w-[120px] md:max-w-[150px] lg:max-w-[180px] object-contain"
+                className="h-10 md:h-12 w-auto max-w-[160px] object-contain mb-4"
               />
+              <p className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-4">
+                Precision Location Intelligence
+              </p>
+              <p className="text-gray-500 text-sm leading-relaxed">
+                Advanced BLE RTLS technology delivering real-time location intelligence for enterprise operations.
+              </p>
             </div>
-            <p className="text-gray-500 text-[10px] md:text-xs font-medium uppercase tracking-wider">
-              PRECISION LOCATION INTELLIGENCE
-            </p>
           </div>
 
-          {/* 2. Description/Content Section */}
-          <div className="flex flex-col justify-center">
-            <p className="text-white text-xs md:text-sm leading-relaxed">
-              CO Tech delivers precision location intelligence for enterprise operations. As part of the CO Consultants group, we combine advanced BLE RTLS technology with deep operational expertise to help construction, healthcare, logistics and retail organizations turn real-time data into strategic competitive advantage. With over a decade of experience across the GCC, Europe and Central Asia, we bridge the gap between on-site reality and decision-making through high-precision tracking and analytics.
-            </p>
-          </div>
-
-          {/* 3. Quick Links Section */}
+          {/* Quick Links */}
           <div>
-            <button
-              onClick={() => toggleSection('quickLinks')}
-              className="w-full flex items-center justify-between md:justify-start mb-4 md:mb-6"
-            >
-              <h3 className="text-white font-semibold text-lg uppercase tracking-wider">
-                Quick Links
-              </h3>
-              <svg
-                className={`w-5 h-5 text-accent md:hidden transition-transform duration-300 ${
-                  openSections.quickLinks ? 'rotate-180' : ''
-                }`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <ul className={`space-y-3 overflow-hidden transition-all duration-300 ${
-              openSections.quickLinks ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 md:max-h-96 md:opacity-100'
-            }`}>
+            <h3 className="text-white font-bold text-base uppercase tracking-wider mb-6">
+              Quick Links
+            </h3>
+            <ul className="space-y-4">
               <li>
                 <button
                   onClick={() => scrollToSection('technology')}
-                  className="text-gray-400 hover:text-accent transition-colors duration-300 text-sm md:text-base"
+                  className="text-gray-400 hover:text-accent transition-all duration-300 text-sm flex items-center gap-2 group"
                 >
+                  <span className="w-1 h-1 bg-accent rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   Technology
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => scrollToSection('use-case-demos')}
-                  className="text-gray-400 hover:text-accent transition-colors duration-300 text-sm md:text-base"
+                  className="text-gray-400 hover:text-accent transition-all duration-300 text-sm flex items-center gap-2 group"
                 >
+                  <span className="w-1 h-1 bg-accent rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   Solutions
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => scrollToSection('visuals')}
-                  className="text-gray-400 hover:text-accent transition-colors duration-300 text-sm md:text-base"
+                  className="text-gray-400 hover:text-accent transition-all duration-300 text-sm flex items-center gap-2 group"
                 >
+                  <span className="w-1 h-1 bg-accent rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   Implementation
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => scrollToSection('results')}
-                  className="text-gray-400 hover:text-accent transition-colors duration-300 text-sm md:text-base"
+                  className="text-gray-400 hover:text-accent transition-all duration-300 text-sm flex items-center gap-2 group"
                 >
+                  <span className="w-1 h-1 bg-accent rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   Proven Results
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="text-gray-400 hover:text-accent transition-colors duration-300 text-sm md:text-base"
+                  className="text-gray-400 hover:text-accent transition-all duration-300 text-sm flex items-center gap-2 group"
                 >
+                  <span className="w-1 h-1 bg-accent rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   Contact
                 </button>
               </li>
             </ul>
           </div>
 
-          {/* Contact Info Section */}
+          {/* Contact Information */}
           <div>
-            <button
-              onClick={() => toggleSection('contactInfo')}
-              className="w-full flex items-center justify-between md:justify-start mb-4 md:mb-6"
-            >
-              <h3 className="text-white font-semibold text-lg uppercase tracking-wider">
-                Contact Info
-              </h3>
-              <svg
-                className={`w-5 h-5 text-accent md:hidden transition-transform duration-300 ${
-                  openSections.contactInfo ? 'rotate-180' : ''
-                }`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <div className={`space-y-3 overflow-hidden transition-all duration-300 ${
-              openSections.contactInfo ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 md:max-h-96 md:opacity-100'
-            }`}>
-              <div className="flex items-start gap-3">
+            <h3 className="text-white font-bold text-base uppercase tracking-wider mb-6">
+              Contact
+            </h3>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <p className="text-gray-400 text-sm md:text-base">
-                  Dubai, UAE
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
+                <span className="text-gray-400 text-sm">Dubai, UAE</span>
+              </li>
+              <li className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 <a 
                   href="mailto:admin@thecoconsultants.com" 
-                  className="text-gray-400 hover:text-accent transition-colors duration-300 text-sm md:text-base"
+                  className="text-gray-400 hover:text-accent transition-colors duration-300 text-sm"
                 >
                   admin@thecoconsultants.com
                 </a>
-              </div>
-              <div className="flex items-start gap-3">
+              </li>
+              <li className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <div className="text-gray-400 text-sm md:text-base">
+                <div className="text-gray-400 text-sm">
                   <p>Mon–Fri: 8AM–6PM</p>
                   <p>Sat: 9AM–4PM</p>
                 </div>
-              </div>
-              
+              </li>
+            </ul>
+          </div>
+
+          {/* Social & Company */}
+          <div>
+            <h3 className="text-white font-bold text-base uppercase tracking-wider mb-6">
+              Connect
+            </h3>
+            <div className="space-y-4">
               {/* Social Media Links */}
-              <div className="flex items-center gap-4 pt-2">
+              <div className="flex items-center gap-4">
                 <a
                   href="http://www.youtube.com/@COTec_h"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-accent transition-colors duration-300"
+                  className="text-gray-400 hover:text-accent transition-all duration-300 hover:scale-110"
                   aria-label="YouTube"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -182,7 +149,7 @@ const Footer: React.FC = () => {
                   href="https://www.instagram.com/cotec_h"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-accent transition-colors duration-300"
+                  className="text-gray-400 hover:text-accent transition-all duration-300 hover:scale-110"
                   aria-label="Instagram"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -193,7 +160,7 @@ const Footer: React.FC = () => {
                   href="https://www.linkedin.com/in/coconsultants/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-accent transition-colors duration-300"
+                  className="text-gray-400 hover:text-accent transition-all duration-300 hover:scale-110"
                   aria-label="LinkedIn"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -204,7 +171,7 @@ const Footer: React.FC = () => {
                   href="https://open.spotify.com/show/2qYcrv4v6dIrhTxPYz0uan?si=f700b0e5539d40c1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-accent transition-colors duration-300"
+                  className="text-gray-400 hover:text-accent transition-all duration-300 hover:scale-110"
                   aria-label="Podcast"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -212,30 +179,47 @@ const Footer: React.FC = () => {
                   </svg>
                 </a>
               </div>
+              
+              {/* Company Link */}
+              <div className="pt-4 border-t border-white/10">
+                <a 
+                  href="https://thecoconsultants.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-accent transition-all duration-300 text-sm flex items-center gap-2 group"
+                >
+                  <span>Part of</span>
+                  <span className="font-semibold text-accent group-hover:text-white transition-colors">Co Consultants</span>
+                  <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom Section */}
+        {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm text-center md:text-left">
-              CoTech © 2025 — An extension of the Co Consultants group
+            <p className="text-gray-500 text-sm text-center md:text-left">
+              © 2025 CoTech. All rights reserved. An extension of the Co Consultants group.
             </p>
-            <div className="flex gap-6 text-sm">
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-sm">
               <a 
                 href="https://thecoconsultants.com/privacy-policy" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-accent transition-colors duration-300"
+                className="text-gray-500 hover:text-accent transition-colors duration-300"
               >
                 Privacy Policy
               </a>
+              <span className="text-gray-600">•</span>
               <a 
                 href="https://thecoconsultants.com/terms-and-conditions" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-accent transition-colors duration-300"
+                className="text-gray-500 hover:text-accent transition-colors duration-300"
               >
                 Terms & Conditions
               </a>

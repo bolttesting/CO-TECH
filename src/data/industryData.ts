@@ -44,7 +44,7 @@ export const industryData: IndustryDataItem[] = [
     }
   },
   {
-    title: 'Intelligent Warehouses',
+    title: 'Intelligent Warehouse',
     category: 'Throughput Optimization',
     features: [
       '90% reduction in search time for pallets, ULDs, and equipment.',

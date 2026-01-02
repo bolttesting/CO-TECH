@@ -27,7 +27,7 @@ const infographics: InfographicItem[] = [
     image: '/images/infographics/2. Museum.png'
   },
   { 
-    title: 'Intelligent Warehouses', 
+    title: 'Intelligent Warehouse', 
     color: '#F97316', 
     bgColor: 'bg-orange-500/10', 
     image: '/images/infographics/3. Warehouse Infograph.png'
@@ -168,7 +168,7 @@ const VisualSolutions: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
           <div className="text-center mb-8 md:mb-12 reveal">
             <h3 className="text-5xl md:text-6xl font-black mb-6 text-white">
-              challenges & Solutions
+              Challenges & Solutions
             </h3>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               High-definition infographics for technical implementation and spatial awareness.
@@ -234,9 +234,9 @@ const VisualSolutions: React.FC = () => {
                         <div className="absolute inset-0 bg-primary/20 z-10"></div>
                         <div className="absolute inset-0 bg-primary/60 z-20"></div>
                       </div>
-                      <div className="p-6 md:p-8 bg-primary relative flex-shrink-0 h-24 md:h-28 flex flex-col justify-center">
+                      <div className="p-6 md:p-8 bg-primary relative flex-shrink-0 min-h-28 md:min-h-32 flex flex-col justify-center">
                         <div className="absolute top-0 left-0 right-0 h-1 bg-white/20"></div>
-                        <h5 className="text-white font-black text-lg md:text-xl mb-2 line-clamp-2">{item.title}</h5>
+                        <h5 className="text-white font-black text-base md:text-lg mb-2 line-clamp-2 break-words whitespace-normal">{item.title}</h5>
                         <p className="text-gray-400 text-xs uppercase tracking-wider">Click for full version</p>
                       </div>
                       <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">

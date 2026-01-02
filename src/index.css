@@ -156,3 +156,27 @@ section {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Safari Video Controls Fix */
+video::-webkit-media-controls {
+  display: flex !important;
+}
+
+video::-webkit-media-controls-panel {
+  display: flex !important;
+  z-index: 1;
+}
+
+video::-webkit-media-controls-play-button {
+  display: flex !important;
+}
+
+video::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-time-remaining-display {
+  display: flex !important;
+}
+
+/* Ensure custom buttons are above Safari controls */
+video + * {
+  z-index: 50 !important;
+}

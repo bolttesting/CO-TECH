@@ -94,19 +94,21 @@ const TechDeepDive: React.FC = () => {
           </video>
 
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-primary/10 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-primary/10 pointer-events-none z-10"></div>
 
           <button
             onClick={toggleMute}
-            className="absolute top-4 left-4 md:top-6 md:left-6 z-30 glass-dark hover:bg-accent/20 text-white p-2 md:p-3 rounded-lg backdrop-blur-md transition-all flex items-center gap-2 border border-white/20 group shadow-lg hover:scale-105 text-sm md:text-base"
+            className="absolute top-2 right-2 md:top-4 md:right-4 z-[60] glass-dark hover:bg-accent/20 text-white p-1.5 md:p-3 rounded-lg backdrop-blur-md transition-all flex items-center gap-1 md:gap-2 border border-white/20 group shadow-lg hover:scale-105 text-xs md:text-base"
+            style={{ pointerEvents: 'auto', minWidth: 'auto' }}
+            aria-label={isMuted ? 'Unmute video' : 'Mute video'}
           >
-            <span className="text-base md:text-lg leading-none">{isMuted ? '🔇' : '🔊'}</span>
-            <span className="text-[10px] md:text-xs font-semibold uppercase tracking-wide hidden sm:inline">
+            <span className="text-sm md:text-lg leading-none">{isMuted ? '🔇' : '🔊'}</span>
+            <span className="text-[9px] md:text-xs font-semibold uppercase tracking-wide hidden md:inline">
               {isMuted ? 'Unmute' : 'Mute'}
             </span>
           </button>
           
-          <div className="absolute inset-0 pointer-events-none flex flex-col justify-start md:justify-end p-4 md:p-8 lg:p-12">
+          <div className="absolute inset-0 pointer-events-none flex flex-col justify-start md:justify-end p-4 md:p-8 lg:p-12 z-20" style={{ paddingBottom: 'clamp(50px, 8vw, 70px)' }}>
             <div className="flex items-center gap-2 md:gap-4 text-accent mt-2 md:mt-0 md:mb-4">
               <div className="relative">
                 <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-accent animate-ping"></div>

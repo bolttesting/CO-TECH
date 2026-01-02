@@ -180,3 +180,17 @@ video::-webkit-media-controls-time-remaining-display {
 video + * {
   z-index: 50 !important;
 }
+
+/* Image Performance Optimizations */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Optimize lazy-loaded images */
+img[loading="lazy"] {
+  content-visibility: auto;
+}

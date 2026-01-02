@@ -105,7 +105,7 @@ const UseCaseDemos: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-6 text-gray-900 w-full z-10">
           <div className="text-center mb-8 md:mb-12 reveal">
             <h3 className="text-5xl md:text-6xl font-black text-primary tracking-tighter mb-6">
-              Use Case scenario
+              Use Case Scenarios
             </h3>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               High-precision deployment scenarios powered by advanced spatial intelligence.
@@ -139,6 +139,8 @@ const UseCaseDemos: React.FC = () => {
                       alt={item.title}
                       loading="lazy"
                       decoding="async"
+                      width="800"
+                      height="450"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-primary/60 group-hover:bg-primary/40 transition-all duration-500"></div>

@@ -63,6 +63,10 @@ const Header: React.FC = () => {
               src="/Artboard 6@4x.png" 
               alt="COTECH Logo" 
               className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto max-w-[140px] sm:max-w-[180px] md:max-w-[220px] lg:max-w-[250px] object-contain"
+              width="250"
+              height="60"
+              fetchPriority="high"
+              decoding="sync"
             />
           </div>
           <nav className="hidden lg:flex space-x-4 xl:space-x-6 2xl:space-x-8 text-xs xl:text-sm font-medium items-center">

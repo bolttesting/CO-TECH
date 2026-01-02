@@ -225,6 +225,9 @@ const VisualSolutions: React.FC = () => {
                           alt={item.title}
                           className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                           loading="lazy"
+                          decoding="async"
+                          width="400"
+                          height="320"
                           onError={(e) => {
                             // Fallback if image fails to load
                             const target = e.target as HTMLImageElement;
@@ -295,6 +298,8 @@ const VisualSolutions: React.FC = () => {
               src={selectedInfographic.image} 
               alt={selectedInfographic.title}
               className="max-w-full max-h-full w-auto h-auto object-contain"
+              loading="eager"
+              decoding="async"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.src = 'https://images.unsplash.com/photo-1474302770737-173ee21bab63?auto=format&fit=crop&q=80&w=800';

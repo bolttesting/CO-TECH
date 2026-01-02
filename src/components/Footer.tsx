@@ -26,6 +26,10 @@ const Footer: React.FC = () => {
                 src="/Artboard 6@4x.png" 
                 alt="COTECH Logo" 
                 className="h-10 md:h-12 w-auto max-w-[160px] object-contain mb-4"
+                width="160"
+                height="40"
+                loading="lazy"
+                decoding="async"
               />
               <p className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-4">
                 Precision Location Intelligence

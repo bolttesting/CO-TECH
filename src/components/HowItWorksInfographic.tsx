@@ -35,6 +35,10 @@ const HowItWorksInfographic: React.FC = () => {
             src="/images/infographics/0. how it works infograph portrait.png" 
             alt="How it works infographic"
             className="max-w-full h-auto object-contain w-full"
+            loading="lazy"
+            decoding="async"
+            width="1200"
+            height="1600"
             onError={(e) => {
               // Fallback if image doesn't exist yet
               const target = e.target as HTMLImageElement;
